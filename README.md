@@ -53,8 +53,8 @@ Couter class返回的是一个dict-like project，key可以是需要统计频数
 
     for i in range(len(list_B)):
         for j in set_A:
-            if A[i]==j:
-                counts[B[i]]+=1
+            if list_A[i]==j:
+                counts[list_B[i]]+=1
 
 ### 把2个list合并成一个list，然后用在for循环中
 
