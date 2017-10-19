@@ -3,9 +3,10 @@
 ## 1. 基本内容
 ### 文本读入与分词
 
-with open() as ite:
+    with open() as file:
+    # 一般用file而不用ite
 
-ite是一个iterator，每一步都储存着一个string（一行的内容）
+file是一个iterator，每一步都储存着一个string（一行的内容）
 
 对于csv文件，这个string是用,分开的，分词的话，需要用string的split(',')函数，把字符串转化为较短的list
 
@@ -14,6 +15,8 @@ ite是一个iterator，每一步都储存着一个string（一行的内容）
     g.close()
 
 reviews是个list，每个元素是读入的行
+
+如果数据很大，可以分成多个batch，每个batch有多个sample，分批读入
 
 ### iterator或者generator代替list
 
@@ -77,4 +80,46 @@ map()
 ### sklearn
 * 多列数据中一列A中多个类别在另一列B中的词频统计
 
+### numpy
+    import numpy as np
+* one-hot encoding
+代码：
+    x = [0, 2, 9]
+    n_classes = 10
+    np.eye(n_classes)[x]
+    # 每一个类用不同的行向量表示
+    
 ### tensorflow
+* Difference between tf.placeholder and tf.Variable
+In short, you use tf.Variable for trainable variables such as weithts and biases for your model.
+tf.placeholder is used to feed actual training samples.
+
+* tensor的definition
+tf.placeholder（tensor）的argument用到list参数时（表示这个tensor的维度），具体元素的值可能是None: None for shapes in TensorFlow allow for a dynamic size，None表示该维度可以是任意值。给tf.placeholder（tensor）命名时，需要使用tf.placeholder的name argument. 如果是一个标量，在tf.placeholder中不需要特意去给维度，只需要给数据类型，比如tf.float32(32位浮点数).
+
+* 获取tensor的维度
+有两种方法，第一，x\_tensor.get\_shape()是一个object，可以print，用x\_tensor.get\_shape().to\_list()可以转换为list，具体元素是int；第二，x\_tensor.shape[0]可以给出维度的第一个值，但也是一个object，不是int，要转换为int，需要使用x\_tensor.shape[3].value
+
+* tf.truncated\_normal
+第一个参数是维度，用list给（哪怕是一维向量，只有一个维度），参数还有mean和stddev，默认值分别是0和1.
+
+* tf.nn.conv2d
+用来得到二维扫描的convnet
+
+* tf.nn.bias\_add
+在conv layer上添加bias
+
+* tf.nn.relu
+relu函数
+
+* tf.nn.max\_pool
+max pool函数
+
+* 存在未知维度(None)的tensor的展开，从高维向量变成低维向量，比如二维向量（flatten layer所做的事情）
+代码：
+
+    shape = x_tensor.get_shape().as_list() #首先拿到张量的维度
+    dim = np.prod(shape[1:]) #把需要合并的维度乘起来，np.prod表示连乘
+    tf.reshape(x_tensor, [-1, dim]) #使用tf.reshape改变维度，2D list表示改变成2维，第一个维度是-1，第二个维度是
+    # 确定值的话，表示在保证总的元素个数的情况下，第二个维度固定，第一个维度需要具体计算
+
