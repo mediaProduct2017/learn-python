@@ -71,6 +71,11 @@ zip()
 map()
 
     d=map(None,a,b)
+    
+### 打印格式的控制
+
+    print('Loss: {:>10.4f} Validation Accuracy: {:.6f}'.format(loss, valid_acc))
+    # {}中的:表示格式控制，>10表示10个空格，.4或者.6表示四位或者六位小数
 
 ## 2. 第三方模块
 
@@ -83,7 +88,9 @@ map()
 ### numpy
     import numpy as np
 * one-hot encoding
+
 代码：
+
     x = [0, 2, 9]
     n_classes = 10
     np.eye(n_classes)[x]
@@ -123,3 +130,39 @@ max pool函数
     tf.reshape(x_tensor, [-1, dim]) #使用tf.reshape改变维度，2D list表示改变成2维，第一个维度是-1，第二个维度是
     # 确定值的话，表示在保证总的元素个数的情况下，第二个维度固定，第一个维度需要具体计算
 
+* tf.layers.dense
+fully connected neural network, 可以选择activation function，也可以使用$f(x)=x$来做activation（也就是不加activation）
+
+* tf.nn.dropout
+用来添加dropout，防止过拟合
+
+* tensor的命名
+
+代码：
+    # Name logits Tensor, so that is can be loaded from disk after training
+    logits = tf.identity(logits, name='logits')
+    
+* cross entropy and mean
+
+代码：
+    cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits=logits, labels=y))
+    
+* AdamOptimizer
+不需要设置learning rate
+代码：
+    optimizer = tf.train.AdamOptimizer().minimize(cost)
+
+* accuracy的计算
+
+代码：
+    correct_pred = tf.equal(tf.argmax(logits, 1), tf.argmax(y, 1)) #0和1组成的向量
+    accuracy = tf.reduce_mean(tf.cast(correct_pred, tf.float32), name='accuracy')
+    
+* train_neural_network
+
+代码：
+    session.run(optimizer, feed_dict={
+        x: feature_batch,
+        y: label_batch,
+        keep_prob: keep_probability})
+                
