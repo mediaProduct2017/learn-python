@@ -30,13 +30,15 @@ iterator或者generator有三种产生办法，一种是在函数中用yield语�
 
 generator的好处是非常简单，可以说，只实现iter和next这两个步骤，而iterator是某些类的统称，这些类包含iter和next这两个方法，但是，不只是这两个方法，可能还有很多method和attribute，可能非常占空间。
 
-### 对for循环的替代
+### 对for循环的替代及与for循环的比较
 
 generator的生成、list comprehension、dict comprehension
 
 Python函数式编程之map()、filter()
 
 map()带两类参数，第一类参数是个函数，第二类参数是一个或者多个iterator(比如list、tuple、字符串等)，返回的也是一个iterator（有可能只是个generator），具体值是函数作用于iterator的结果
+
+[python中，for循环，map函数，list comprehension列表推导的效率比较](https://www.cnblogs.com/superxuezhazha/p/5714970.html)
 
 filter带两类参数，第一类参数是个函数，第二类参数是一个或者多个iterator(比如list、tuple、字符串等)，返回的也是一个iterator，具体值是函数作用于iterator后结果为True的值
 
@@ -49,6 +51,23 @@ Couter class返回的是一个dict-like project，key可以是需要统计频数
     counts = Counter()
     for i in generator: # generator or list of words
         counts[i]+=1
+        
+### dict相对于list的以空间换时间
+
+redis list的lrange得到的就是二维list
+
+从二维list当中得到某两列的对应关系：
+
+{item[0]:item[1] for item in list}
+
+把二维list的某一列替换为与之对应的另一列：
+
+list_a与list_b对应
+
+the_dict = {i:j for i,j in zip(list_a, list_b)}
+
+for item in list:
+    item[0]= the_dict[item[0]]
         
 ### 多列数据中一列A中多个类别在另一列B中的词频统计
 
