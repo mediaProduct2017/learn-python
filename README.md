@@ -97,6 +97,12 @@ map()
 
     print('Loss: {:>10.4f} Validation Accuracy: {:.6f}'.format(loss, valid_acc))
     # {}中的:表示格式控制，>10表示10个空格，.4或者.6表示四位或者六位小数
+    
+### Dictrionary-based string formatting
+
+    params = {'server': 'mpilgrm', 'database': 'master'}
+    "%(database)s" % params
+    # master
 
 ## 2. 第三方模块
 
