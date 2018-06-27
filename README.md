@@ -18,9 +18,15 @@ reviews是个list，每个元素是读入的行
 
 如果数据很大，可以分成多个batch，每个batch有多个sample，分批读入
 
-### iterator或者generator代替list
+### iterable, iterator或者generator代替list
 
-iterator是一个类，有__iter__()、next()等方法，generator是一个特殊的函数，能用在for循环中，函数返回值不断被调用，但用在for循环中时，看上去和iterator是一样的
+An iterable is an object that has an __iter__ method which returns an iterator or a generator, or which defines a __getitem__ method that can take sequential indexes starting from zero (and raises an IndexError when the indexes are no longer valid). So an iterable is an object that you can get an iterator from.
+
+An iterator is an object with a next (Python 2) or __next__ (Python 3) method.
+
+iterator是一个类，有next()等方法，generator是一个特殊的函数，也能用next()函数调用，能用在for循环中，函数返回值不断被调用，但用在for循环中时，看上去和iterator是一样的
+
+对于iterable，由于有iter method，所以可以在多个for循环中使用；而对于iterator和generator，只能被一个for循环使用一次，就没有内容了。
 
 当list很长时，应该用iterator或者generator代替list，节省内存空间
 
