@@ -1,6 +1,173 @@
 # learn-python
 
 ## 1. 基本内容
+
+### base directory of a project
+
+[base_dir](https://github.com/arfu2016/nlp/tree/master/nlp_models/base_dir)
+
+### 去掉非中文词汇
+
+[batch-t2s_seg_clean](https://github.com/arfu2016/nlp/tree/master/nlp_models/batch-t2s_seg_clean)
+
+[select_chinese_words](https://github.com/arfu2016/nlp/tree/master/nlp_models/select_chinese_words)
+
+### binary search
+
+[binary_search](https://github.com/arfu2016/nlp/tree/master/nlp_models/binary_search)
+
+### cache
+
+[cache](https://github.com/arfu2016/nlp/tree/master/nlp_models/cache)
+
+### callback
+
+[callback](https://github.com/arfu2016/nlp/tree/master/nlp_models/callback)
+
+### cartesian product
+
+[cartesian_product](https://github.com/arfu2016/nlp/tree/master/nlp_models/cartesian_product)
+
+### concurrency
+
+[concurrent](https://github.com/arfu2016/nlp/tree/master/nlp_models/concurrent)
+
+### confusion matrix
+
+[confusion_matrix](https://github.com/arfu2016/nlp/tree/master/nlp_models/confusion_matrix)
+
+### construct LineSentence
+
+[construct_LineSentence](https://github.com/arfu2016/nlp/tree/master/nlp_models/construct_LineSentence)
+
+### data analysis
+
+[data_analysis](https://github.com/arfu2016/nlp/tree/master/nlp_models/data_analysis)
+
+### decision tree
+
+[decision_tree](https://github.com/arfu2016/nlp/tree/master/nlp_models/decision_tree)
+
+决策树建模非常灵活自由，是一种nonparametric的方法，可以用来处理各种数据，同时具有很强的可解释性。
+
+自变量可以是连续或者离散变量，因变量也可以是连续或者，因变量可以有多个，表现为矩阵的多列。
+
+### feature scaling
+
+[feature_scaling](https://github.com/arfu2016/nlp/tree/master/nlp_models/feature_scaling)
+
+### file read
+
+[file_read](https://github.com/arfu2016/nlp/tree/master/nlp_models/file_read)
+
+[load_table_sql_csv_excel](https://github.com/arfu2016/nlp/tree/master/nlp_models/load_table_sql_csv_excel)
+
+[path_file_object](https://github.com/arfu2016/nlp/tree/master/nlp_models/path_file_object)
+
+### file write
+
+[file_write](https://github.com/arfu2016/nlp/tree/master/nlp_models/file_write)
+
+[part_text](https://github.com/arfu2016/nlp/tree/master/nlp_models/part_text)
+
+### gradient descent
+
+[gradient_descent](https://github.com/arfu2016/nlp/tree/master/nlp_models/gradient_descent)
+
+### greedy algorithm
+
+[greedy](https://github.com/arfu2016/nlp/tree/master/nlp_models/greedy)
+
+### Kmeans clustering
+
+[kmeans](https://github.com/arfu2016/nlp/tree/master/nlp_models/kmeans)
+
+### lagrange interpolation
+
+[lagrange_interpolation](https://github.com/arfu2016/nlp/tree/master/nlp_models/lagrange_interpolation)
+
+### named tuple
+
+[namedtuple](https://github.com/arfu2016/nlp/tree/master/nlp_models/namedtuple)
+
+### pca
+
+[pca](https://github.com/arfu2016/nlp/tree/master/nlp_models/pca)
+
+### pearson corelation coefficient
+
+[pearson](https://github.com/arfu2016/nlp/tree/master/nlp_models/pearson)
+
+### pipeline
+
+[pipeline](https://github.com/arfu2016/nlp/tree/master/nlp_models/pipeline)
+
+### pprint
+
+[pprint_list](https://github.com/arfu2016/nlp/tree/master/nlp_models/pprint_list)
+
+### property decorator
+
+[property](https://github.com/arfu2016/nlp/tree/master/nlp_models/property)
+
+### deal with punctuation
+
+[punctuation](https://github.com/arfu2016/nlp/tree/master/nlp_models/punctuation)
+
+### random compliment for dataset
+
+[random_compliment](https://github.com/arfu2016/nlp/tree/master/nlp_models/random_compliment)
+
+### random data generation
+
+[random_data](https://github.com/arfu2016/nlp/tree/master/nlp_models/random_data)
+
+### logging
+
+[set-logger](https://github.com/arfu2016/nlp/tree/master/nlp_models/set-logger)
+
+[tf-logger](https://github.com/arfu2016/nlp/tree/master/nlp_models/tf-logger)
+
+### sort
+
+[sort](https://github.com/arfu2016/nlp/tree/master/nlp_models/sort)
+
+[shellsort](https://github.com/arfu2016/nlp/tree/master/nlp_models/shellsort)
+
+### str and repr
+
+[str_repr](https://github.com/arfu2016/nlp/tree/master/nlp_models/str_repr)
+
+### timeit in python
+
+[timeit_in_python](https://github.com/arfu2016/nlp/tree/master/nlp_models/timeit_in_python)
+
+### tokenizer
+
+[tokenizer](https://github.com/arfu2016/nlp/tree/master/nlp_models/tokenizer)
+
+### train validation test split
+
+[train_val_test](https://github.com/arfu2016/nlp/tree/master/nlp_models/train_val_test)
+
+### unit test
+
+[unit_test](https://github.com/arfu2016/nlp/tree/master/nlp_models/unit_test)
+
+### vector calculation
+
+[vector_calculation](https://github.com/arfu2016/nlp/tree/master/nlp_models/vector_calculation)
+
+###  词汇表与id互转
+
+[vocab_deeplearning](https://github.com/arfu2016/nlp/tree/master/nlp_models/vocab_deeplearning)
+
+[word_index](https://github.com/arfu2016/nlp/tree/master/nlp_models/word_index)
+
+### 维基百科数据的处理
+
+[wiki_process](https://github.com/arfu2016/nlp/tree/master/nlp_models/wiki_process)
+
 ### 文本读入与分词
 
     with open() as file:
@@ -18,7 +185,21 @@ reviews是个list，每个元素是读入的行
 
 如果数据很大，可以分成多个batch，每个batch有多个sample，分批读入
 
+### serializing and deserializing
+
+serializing是把python中的对象转化为字符串，然后可以保存到文本文件或者数据库中。
+
+虽然都是转化为字符串，但serializing有多种方法，所以deserializing也有多种方法。
+
+    encode()与decode()
+    str()与int()
+    repr()与eval()
+    json.dumps()与json.loads()
+    pickle.dumps()与pick.loads()
+
 ### iterable, iterator或者generator代替list
+
+[construct_iterable](https://github.com/arfu2016/nlp/tree/master/nlp_models/construct_iterable)
 
 An iterable is an object that has an __iter__ method which returns an iterator or a generator, or which defines a __getitem__ method that can take sequential indexes starting from zero (and raises an IndexError when the indexes are no longer valid). So an iterable is an object that you can get an iterator from.
 
@@ -112,6 +293,10 @@ map()
 
 ## 2. 第三方模块
 
+### math (python standard library)
+
+[math](https://github.com/arfu2016/nlp/tree/master/nlp_models/math)
+
 ### pandas
 * 大数据文件的读入，所需时间的估计与比较
 
@@ -119,6 +304,9 @@ map()
 * 多列数据中一列A中多个类别在另一列B中的词频统计
 
 ### numpy
+
+[numba_det](https://github.com/arfu2016/nlp/tree/master/nlp_models/numba_det)
+
     import numpy as np
 * one-hot encoding
 
@@ -130,8 +318,15 @@ map()
     # 每一个类用不同的行向量表示
     
 除了用numpy，也可以用sklearn中的LabelBinarizer or OneHotEncoder。
+
+### matplotlib
+
+[matplotlib](https://github.com/arfu2016/nlp/tree/master/nlp_models/matplotlib)
     
 ### tensorflow
+
+[parameter_number](https://github.com/arfu2016/nlp/tree/master/nlp_models/parameter_number)
+
 * Difference between tf.placeholder and tf.Variable
 In short, you use tf.Variable for trainable variables such as weithts and biases for your model.
 tf.placeholder is used to feed actual training samples.
@@ -200,4 +395,8 @@ fully connected neural network, 可以选择activation function，也可以使�
         x: feature_batch,
         y: label_batch,
         keep_prob: keep_probability})
-                
+
+* bucketing
+
+[bucketing](https://github.com/arfu2016/nlp/tree/master/nlp_models/bucketing)
+
