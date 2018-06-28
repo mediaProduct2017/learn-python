@@ -86,6 +86,10 @@
 
 [lagrange_interpolation](https://github.com/arfu2016/nlp/tree/master/nlp_models/lagrange_interpolation)
 
+### multiple layer perceptron
+
+[multiple_layer_perceptron](https://github.com/arfu2016/nlp/tree/master/nlp_models/multiple_layer_perceptron)
+
 ### named tuple
 
 [namedtuple](https://github.com/arfu2016/nlp/tree/master/nlp_models/namedtuple)
@@ -109,6 +113,10 @@
 ### property decorator
 
 [property](https://github.com/arfu2016/nlp/tree/master/nlp_models/property)
+
+### q2answer
+
+[q2answer](https://github.com/arfu2016/nlp/tree/master/nlp_models/q2answer)
 
 ### deal with punctuation
 
