@@ -299,6 +299,7 @@ map()
     "%(database)s" % params
     # master
 
+
 ## 2. 第三方模块
 
 ### math (python standard library)
@@ -306,7 +307,24 @@ map()
 [math](https://github.com/arfu2016/nlp/tree/master/nlp_models/math)
 
 ### pandas
+
 * 大数据文件的读入，所需时间的估计与比较
+
+* 索引
+
+df.loc等
+
+    df.loc['index_name', 'column_name']
+    
+可以像matlab一样在'index_name'或者'column_name'用中括号括起来的向量
+
+df.iloc是类似的，用的是序号；df.ix既可以用序号，也可以用名字
+
+* 替换
+
+df.replace()
+
+参数是字典，标明要把什么替换为什么，可作用于整个dataframe，真的很方便
 
 ### sklearn (scikit-learn)
 * 多列数据中一列A中多个类别在另一列B中的词频统计
@@ -330,6 +348,55 @@ map()
 ### matplotlib
 
 [matplotlib](https://github.com/arfu2016/nlp/tree/master/nlp_models/matplotlib)
+
+    ax.set_xlim(1,4)  # 设定x轴范围
+    ax.set_ylim(-8.5,11) # 设定y轴范围
+    
+* 在matplotlib中显示中文
+
+下载SimHei.ttf字体  
+找到matplotlib字体文件夹，例如：matplotlib/mpl-data/fonts/ttf，将SimHei.ttf拷贝到ttf文件夹下面  
+在文件中添加代码
+
+    plt.rcParams['font.sans-serif'] = ['SimHei']
+    plt.rcParams['axes.unicode_minus']=False  #用来正常显示负号
+    
+改了配置之后并不会生效，需要重新加载字体，在Python中运行如下代码即可：
+
+    from matplotlib.font_manager import _rebuild
+    _rebuild() #reload一下
+    
+线条的属性linestyle
+
+'-' 实线  
+'--' 破折线  
+'-.' 点划线  
+':' 虚线
+
+线条标记marker
+
+'o' 圆圈  
+'D' 菱形
+'p' 五边形  
+'+' 加号  
+'s' 正方形  
+'*' 星号
+'d' 小菱形
+'x' X
+
+绘图
+
+    plt.figure(num = 5, figsize = (4, 4))
+    # num可以是int，也可以是字符串
+
+title例子：
+
+    plt.title('Interesting Graph',fontsize='large'，fontweight='bold') 设置字体大小与格式
+    plt.title('Interesting Graph',color='blue') 设置字体颜色
+    plt.title('Interesting Graph',loc ='left') 设置字体位置
+    plt.title('Interesting Graph',verticalalignment='bottom') 设置垂直对齐方式
+    plt.title('Interesting Graph',rotation=45) 设置字体旋转角度
+    plt.title('Interesting',bbox=dict(facecolor='g', edgecolor='blue', alpha=0.65 )) 标题边框
     
 ### tensorflow
 
