@@ -320,6 +320,16 @@ df.loc等
 
 df.iloc是类似的，用的是序号；df.ix既可以用序号，也可以用名字
 
+如果要交换两列，直接用这样的方法是不对的：
+
+    df.loc[:,['B', 'A']] = df[['A', 'B']]
+    
+这是因为pandas默认在赋值的时候回匹配列名，这里面的AB和BA实际上没有区别。如果想要交换两列的话，应该使用AB两列的值作为右值，这样就不带列索引名了。
+
+    df.loc[:,['B', 'A']] = df[['A', 'B']].values
+    
+.values其实已经把pandas.DataFrame转换成了numpy.array.
+
 * 替换
 
 df.replace()
