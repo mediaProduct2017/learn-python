@@ -359,8 +359,24 @@ df.replace()
 
 [matplotlib](https://github.com/arfu2016/nlp/tree/master/nlp_models/matplotlib)
 
+[matplotlib绘图系列文章](https://zhuanlan.zhihu.com/p/37595853)
+
+[matplot同时画两条线](https://blog.csdn.net/x_i_y_u_e/article/details/50319441)
+
+    fig, ax = plt.subplots()
     ax.set_xlim(1,4)  # 设定x轴范围
     ax.set_ylim(-8.5,11) # 设定y轴范围
+    
+    plt.plot(x, color='red', label="x")
+    plt.plot(y, color='blue', label="y")
+    ax.set_ylim(ymin=12)
+    plt.title('Mutualism Model', fontweight='bold', fontsize='large')
+    plt.xlabel('Time', fontweight='bold', fontsize='large')
+    plt.ylabel('Population', fontweight='bold', fontsize='large')
+    xticks = range(0,200,50)
+    ax.set_xticks(xticks)
+    plt.legend(bbox_to_anchor=(1, 0), loc=4, borderaxespad=0.)
+    plt.show()
     
 * 在matplotlib中显示中文
 
