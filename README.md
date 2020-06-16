@@ -377,7 +377,31 @@ df.replace()
     ax.set_xticks(xticks)
     plt.legend(bbox_to_anchor=(1, 0), loc=4, borderaxespad=0.)
     plt.show()
+ 
+ 多个子图的绘制
+ 
+    fig, ax = plt.subplots(nrows=1, ncols=2)
+    fig.set_size_inches(8, 8)
+    ax[0, 0].plot(fee_three, ratio_three, 'x', color='green', label='3 times')
+    ax[0, 0].plot(fee_two, ratio_two, 'o', color='blue', label='twice')
+    ax[0, 0].plot(fee_one, ratio_one, '+', color='red', label='once')
+    ax[0, 0].set_ylabel('y label')
+    ax[0, 0].set_xlabel('x label')
+    ax[0, 0].set_xlim(0, 20000)
+    ax[0, 0].set_title('policy')
+    ax[0, 0].legend(loc='lower right')
     
+    ax[0, 1].plot(fee_one, ratio_one, '+', color='red')
+    ax[0, 0].set_ylabel('y label')
+    ax[0, 0].set_xlabel('x label')
+    ax[0, 0].set_xlim(0, 20000)
+    ax[0, 0].set_title('once')
+    
+    fig.tight_layout()
+    z.show(plt)
+    plt.close()
+ 
+ 
 * 在matplotlib中显示中文
 
 下载SimHei.ttf字体  
